@@ -100,6 +100,7 @@ module Aquatone
         task_count = 0
         @start_time = Time.now.to_i
         @hosts.each do |host|
+          task_count += 1
           if asked_for_progress?
             output("Stats: #{seconds_to_time(Time.now.to_i - @start_time)} elapsed; " \
                    "#{task_count} out of #{@hosts.count} hosts checked (#{@host_dictionary.keys.count} discovered); " \
@@ -114,7 +115,6 @@ module Aquatone
             output("#{''.ljust(15)} #{bold(host)}\n")
           end
           jitter_sleep
-          task_count += 1
         end
         output("\n", true)
       end
