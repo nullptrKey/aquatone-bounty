@@ -11,8 +11,8 @@ options = {
 OptionParser.new do |opts|
   opts.banner = "Usage: aquatone-discover OPTIONS"
 
-  opts.on("--keep-unresolved", "Keep domains regardless of resovability") do |v|
-    options[:keep_unresolved] = v
+  opts.on("--keep-unresolved-cnames", "Keep CNAME domains regardless of resovability") do |v|
+    options[:keep_unresolved_cnames] = v
   end
 
   opts.on("-d", "--domain DOMAIN", "Domain name to assess") do |v|
