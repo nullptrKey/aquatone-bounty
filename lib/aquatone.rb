@@ -47,3 +47,4 @@ require "aquatone/commands/discover"
 require "aquatone/commands/scan"
 require "aquatone/commands/gather"
 require "aquatone/commands/takeover"
+$stdout.sync = true
